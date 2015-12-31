@@ -12,7 +12,7 @@ function saveOriginal()
 }
 
 
-if  !grep 'max_usb_current=1' $file;
+if  ! grep 'max_usb_current=1' $file;
 	then
 		saveOriginal $file
 		echo "max_usb_current=1" >> $file
