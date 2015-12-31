@@ -22,9 +22,11 @@ function saveOriginal()
 if  ! grep '# add spindown_time for sda' $file;
 	then
 		saveOriginal $file
-		echo "# add spindown_time for sda"
+		echo "" >> $file
+		echo "# add spindown_time for sda" >> $file
 		echo "/dev/sda {" >> $file
 		echo "    write_cache = on" >> $file
 		echo "    spindown_time = $SPIN_DOWN_TIME" >> $file
 		echo "}" >> $file
+		echo "" >> $file
 	fi
