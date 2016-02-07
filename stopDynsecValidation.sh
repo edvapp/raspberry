@@ -14,5 +14,5 @@ file=/etc/bind/named.conf.options
 saveOriginal $file
 
 sed -e "{
-	s/dynsec-validation auto/#dynsec-validation auto/
+	s/dnssec-validation auto/\/\/dnssec-validation auto/
 }" -i $file
