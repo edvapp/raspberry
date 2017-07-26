@@ -1,0 +1,4 @@
+To repair the rasperry pi filesystem:
+
+Put sd-card into an other running computer ad type:
+>> sudo fsck -fy /dev/sdb2

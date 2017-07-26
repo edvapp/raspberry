@@ -1,0 +1,15 @@
+# /etc/systemd/system/hdparm.service
+# systemctl enable hdparm.service
+
+# hdparm -S 60 <=> 60 * 5 sek = 300 sek = 5 min
+
+[Unit]
+Description=hdparm sets disk spindown time
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/hdparm -S 60 /dev/sda
+
+[Install]
+WantedBy=multi-user.target
+ 
